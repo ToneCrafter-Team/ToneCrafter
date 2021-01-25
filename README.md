@@ -1,6 +1,6 @@
-<img src="ToneCrafter_logo.png" width="60"><h1>ToneCrafter</h1>
+<h1><img src="ToneCrafter_logo.png" width="60">ToneCrafter</h1>
 
-ToneCrafter is a project developped by students at [ENSEA](https://www.ensea.fr/).
+ToneCrafter is a project developped by students at [ENSEA](https://www.ensea.fr/).  
 Our goal is to develop an algorithm capable of analyzing any audio file containing guitar sounds and retrieve its parameters. ToneCrafter will then generate a numeric filter that will modulate your guitar sound and make it sound like the recording you fed it. Exciting isn't it ?  
 We are also working on a hardware implementation using a STM32 µC that will allow musicians to use ToneCrafter on stage and tune the different parameters.
 ## Our work so far 
