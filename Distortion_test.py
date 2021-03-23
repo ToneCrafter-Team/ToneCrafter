@@ -100,8 +100,8 @@ specplot(distortion(0.2,audio))
 #Another try of a Distortion... 
 audio_dist=audio
 audio_dist_np=np.empty_like(audio_dist.numpy())
-pregain=5
-treshold=0.06
+pregain=1
+treshold=0.03
 for i in range (n_frames*hop_size):
 
     audio_dist_np[0][i]=pregain*audio_dist.numpy()[0][i]
