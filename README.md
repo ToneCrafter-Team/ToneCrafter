@@ -5,7 +5,8 @@ Our goal is to develop an algorithm capable of analyzing any audio file containi
 We are also working on a hardware implementation using a STM32 µC that will allow musicians to use ToneCrafter on stage and tune the different parameters.
 ## Our work so far 
 ### Software :
-We are currently using magenta's [DDSP](https://www.github.com/magenta/ddsp) library on a conda installation with Python 3.8, and are currently able to create simple filters such as a reverb, delay, flanger, chorus, vibrato, and soon a distortion !
+We are currently using magenta's [DDSP](https://www.github.com/magenta/ddsp) library on a conda installation with Python 3.8, and are currently able to create simple filters such as a reverb, delay, flanger, chorus, vibrato, and soon a distortion !  
+<b><u>Update :</u></b> As of March of 2021, we no longer use DDSP as it's API is a bit too complex to use for us. Instead, we are defining our own CNN with a revised goal : being able to properly replicate a distortion. Our plan is to build off that base model to adapt it to more and more effects.
 ### Hardware :
 We started working on different PCB designs using [Eagle](https://www.autodesk.com/products/eagle/overview) and working on a STM32F7 discovery kit for testing purposes.
 ## What's next ?
