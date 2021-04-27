@@ -8,7 +8,6 @@ warnings.filterwarnings('ignore')
 import tensorflow
 tensorflow.compat.v1.disable_eager_execution()
 from tensorflow.keras.datasets import mnist
-import tensorflow
 
 (trainX, trainy), (testX, testy) = mnist.load_data()
 
