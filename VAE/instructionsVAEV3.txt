@@ -1,0 +1,34 @@
+Google colab 
+
+https://colab.research.google.com/drive/1w1CfoHomuPYcH2jBnOM0GbSJkCI6hfeo?usp=sharing
+
+Sur votre machine :
+
+Installer python V3.8?
+https://www.python.org/downloads/
+
+Ouvrir une console
+
+Installer numpy 
+pip3 install numpy
+https://numpy.org/install/
+
+Installer matplotlib
+pip3 install matplotlib
+https://matplotlib.org/stable/users/installing.html
+
+Installer Pandas
+pip3 install pandas
+https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html
+
+Installer seaborn
+pip3 install seaborn
+https://seaborn.pydata.org/installing.html
+
+Installer CUDA (Nécessite un GPU nvdia. Liste des GPU compatibles https://developer.nvidia.com/cuda-gpus)
+Lien installation : https://developer.nvidia.com/cuda-toolkit
+
+Installer Tensorflow
+pip3 install tensorflow
+https://www.tensorflow.org/install/pip?hl=fr#tensorflow-2-packages-are-available
+
