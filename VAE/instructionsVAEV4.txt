@@ -32,3 +32,5 @@ Installer Tensorflow
 pip3 install tensorflow
 https://www.tensorflow.org/install/pip?hl=fr#tensorflow-2-packages-are-available
 
+Si vous n'éxécutez pas le code sur jupyterNotebook, commentez la ligne 7 : %matplotlib inline
+
