@@ -4,7 +4,7 @@ https://colab.research.google.com/drive/1w1CfoHomuPYcH2jBnOM0GbSJkCI6hfeo?usp=sh
 
 Sur votre machine :
 
-Installer python V3.8?
+Installer python V3.6.8
 https://www.python.org/downloads/
 
 Ouvrir une console
