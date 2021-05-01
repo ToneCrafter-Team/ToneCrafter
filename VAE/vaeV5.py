@@ -1,4 +1,3 @@
-#source https://github.com/kartikgill/Autoencoders
 
 import numpy as np
 import matplotlib.pyplot as plt
