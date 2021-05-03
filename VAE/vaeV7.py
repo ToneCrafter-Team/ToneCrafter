@@ -16,7 +16,7 @@ VARIABLES
 """
 
 nbrVariables=32 #si !=2 pas de plot en 2D  || Il s'agit du nombre de variables de l'espace latent 
-nbrEpochs=10  #nombre d'entrainements réalisés l'erreur décroit logarithmiquement (c'est presque inutile au dela de 10)
+nbrEpochs=1  #3min environ par epoch || nombre d'entrainements réalisés l'erreur décroit logarithmiquement (c'est presque inutile au dela de 10)
 
 
 """
@@ -27,10 +27,10 @@ def calculvecteur(x1,x2):
         res.append(x2[i]-x1[i])
     return(res)
 
-def translation(x1,x2):
+def translation(x1,x2,a):
     res=[]
     for i in range(len(x1)):
-        res.append(x2[i]+x1[i])
+        res.append(a*x2[i]+x1[i])
     return(res)  
 
 #faire la moyenne des colonnes
@@ -333,7 +333,7 @@ else:
         i=i+1
     latent_point = np.array([list(espacelatent[i])])
     image_base = np.reshape(generator_model.predict(latent_point)[0], (28, 28))
-    espacelatentTrans=translation(espacelatent[i],vecteurTranslation)
+    espacelatentTrans=translation(espacelatent[i],vecteurTranslation,1)
     latent_point = np.array([espacelatentTrans])
     image_trans = np.reshape(generator_model.predict(latent_point)[0], (28, 28))
 
@@ -346,6 +346,70 @@ else:
     plt.suptitle('translater un 0 en 1 ', fontsize=16)
     plt.show()
 
+     # translater un 0 en 1 50%
+    vecteurTranslation=calculvecteur(moyenne[0],moyenne[1])
+    i=0
+    while int(valeur[i])!=int(0):
+        i=i+1
+    latent_point = np.array([list(espacelatent[i])])
+    image_base = np.reshape(generator_model.predict(latent_point)[0], (28, 28))
+    espacelatentTrans=translation(espacelatent[i],vecteurTranslation,0.5)
+    latent_point = np.array([espacelatentTrans])
+    image_trans = np.reshape(generator_model.predict(latent_point)[0], (28, 28))
+
+    plt.subplot(211)
+    plt.imshow(image_base, cmap='gray')
+    plt.title("image de base")
+    plt.subplot(212)
+    plt.imshow(image_trans, cmap='gray')
+    plt.title("image après translation")
+    plt.suptitle('translater un 0 en 1, 50%', fontsize=16)
+    plt.show()
+
+
+
+
+     # translater un 0 en 1 75%
+    vecteurTranslation=calculvecteur(moyenne[0],moyenne[1])
+    i=0
+    while int(valeur[i])!=int(0):
+        i=i+1
+    latent_point = np.array([list(espacelatent[i])])
+    image_base = np.reshape(generator_model.predict(latent_point)[0], (28, 28))
+    espacelatentTrans=translation(espacelatent[i],vecteurTranslation,0.75)
+    latent_point = np.array([espacelatentTrans])
+    image_trans = np.reshape(generator_model.predict(latent_point)[0], (28, 28))
+
+    plt.subplot(211)
+    plt.imshow(image_base, cmap='gray')
+    plt.title("image de base")
+    plt.subplot(212)
+    plt.imshow(image_trans, cmap='gray')
+    plt.title("image après translation")
+    plt.suptitle('translater un 0 en 1, 75%', fontsize=16)
+    plt.show()
+
+     # translater un 0 en 1 95%
+    vecteurTranslation=calculvecteur(moyenne[0],moyenne[1])
+    i=0
+    while int(valeur[i])!=int(0):
+        i=i+1
+    latent_point = np.array([list(espacelatent[i])])
+    image_base = np.reshape(generator_model.predict(latent_point)[0], (28, 28))
+    espacelatentTrans=translation(espacelatent[i],vecteurTranslation,0.95)
+    latent_point = np.array([espacelatentTrans])
+    image_trans = np.reshape(generator_model.predict(latent_point)[0], (28, 28))
+
+    plt.subplot(211)
+    plt.imshow(image_base, cmap='gray')
+    plt.title("image de base")
+    plt.subplot(212)
+    plt.imshow(image_trans, cmap='gray')
+    plt.title("image après translation")
+    plt.suptitle('translater un 0 en 1, 95%', fontsize=16)
+    plt.show()
+
+
     # translater un 2 en 8 
     vecteurTranslation=calculvecteur(moyenne[2],moyenne[8])
     i=0
@@ -353,7 +417,7 @@ else:
         i=i+1
     latent_point = np.array([list(espacelatent[i])])
     image_base = np.reshape(generator_model.predict(latent_point)[0], (28, 28))
-    espacelatentTrans=translation(espacelatent[i],vecteurTranslation)
+    espacelatentTrans=translation(espacelatent[i],vecteurTranslation,1)
     latent_point = np.array([espacelatentTrans])
     image_trans = np.reshape(generator_model.predict(latent_point)[0], (28, 28))
 
@@ -373,7 +437,7 @@ else:
         i=i+1
     latent_point = np.array([list(espacelatent[i])])
     image_base = np.reshape(generator_model.predict(latent_point)[0], (28, 28))
-    espacelatentTrans=translation(espacelatent[i],vecteurTranslation)
+    espacelatentTrans=translation(espacelatent[i],vecteurTranslation,1)
     latent_point = np.array([espacelatentTrans])
     image_trans = np.reshape(generator_model.predict(latent_point)[0], (28, 28))
 
