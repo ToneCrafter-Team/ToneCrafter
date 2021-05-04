@@ -30,12 +30,12 @@ We started working on different PCB designs using [Eagle](https://www.autodesk.c
 ### Installing Anaconda and TensorFlow
 To begin with, if you want to work locally and not on Colabs as we did, you will have to install Anaconda.
 To do this, go to:  
-https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/
+https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/  
 And follow the instructions that are given to you.
 
 Then, if you want to have fun on the models created by the Google team with the Magenta project, follow the installation instructions on their GitHub:  
-To do this, go to
-https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/
+To do this, go to:  
+https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/  
 And follow the instructions that are given to you.
 
 Then, if you want to have fun on the models created by the Google team with the Magenta project, follow the installation instructions on their GitHub:
