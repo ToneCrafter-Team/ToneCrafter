@@ -61,6 +61,4 @@ For the maths oriented approach, we used the excellent [IDMT-SMT-Audio_Effects D
 ### Useful links
 
 ## What's next ?
-We are trying to figure out how to convert our DDSP output into a numeric filter in order to begin training our model. In the mean time, we will try to implement a simple filter on our STM32F7 and feed it a guitar input to test the viability of our project.
-
-Enjoy!
+As of the 03/05/2021, our yearly project has ended. We will continue to work on ToneCrafter at a lighter pace, as we'll be completing our summer internships. If all goes well, some new students will pick up the project in the fall to continue to build on top of our work. In the mean time, don't hesitate to take part in our project, via issues or pull requests.  
