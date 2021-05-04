@@ -25,6 +25,21 @@ This sparked three different approaches to our problem:
 
 ### Hardware :
 We started working on different PCB designs using [Eagle](https://www.autodesk.com/products/eagle/overview) and working on a STM32F7 discovery kit for testing purposes.
+
+## How to use ToneCrafter
+### Installing Anaconda and TensorFlow
+To begin with, if you want to work locally and not on Colabs as we did, you will have to install Anaconda.
+To do this, go to
+https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/
+And follow the instructions that are given to you.
+
+Then, if you want to have fun on the models created by the Google team with the Magenta project, follow the installation instructions on their GitHub:
+https://github.com/magenta/magenta
+
+### Dataset
+
+### Useful links
+
 ## What's next ?
 We are trying to figure out how to convert our DDSP output into a numeric filter in order to begin training our model. In the mean time, we will try to implement a simple filter on our STM32F7 and feed it a guitar input to test the viability of our project.
 
