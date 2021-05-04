@@ -7,11 +7,11 @@ We are also working on a hardware implementation using a STM32 µC that will all
 - [Our work so far](#our-work-so-far)
   * [Software](#software--)
   * [Hardware](#hardware--)
--[How to use  ToneCrafter](#)
+- [How to use  ToneCrafter](#)
   * [Installing Anaconda and TensorFlow](#)
   * [Dataset](#)
   * [Useful links](#)
--[Resources](#ressources--)
+- [Resources](#ressources--)
 - [What's next ?](#what-s-next--)
 
 
