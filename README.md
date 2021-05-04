@@ -27,7 +27,7 @@ We started working on different PCB designs using [Eagle](https://www.autodesk.c
 ## How to use ToneCrafter
 ### Installing Anaconda and TensorFlow
 To begin with, if you want to work locally and not on Colabs as we did, you will have to install Anaconda.
-To do this follow the [officials instructions]((https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/)) that are given to you.  
+To do this follow the [officials instructions](https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/) that are given to you.  
 
 If you want to try the huge potential of DDSP, let’s check the [DDSP GitHub](https://github.com/magenta/ddsp) which show how to install it.
 There are also some tutorials to introduce the main concepts of the library (that we strongly recommend you to do) and demos to show what you can do with it (Like Timbre transfer, Train Autoencoder and Pitch Detection).
