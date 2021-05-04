@@ -7,12 +7,12 @@ We are also working on a hardware implementation using a STM32 µC that will all
 - [Our work so far](#our-work-so-far)
   * [Software](#software--)
   * [Hardware](#hardware--)
-- [How to use  ToneCrafter](#)
-  * [Installing Anaconda and TensorFlow](#)
-  * [Dataset](#)
-  * [Useful links](#)
-- [Resources](#ressources--)
-- [What's next ?](#what-s-next--)
+- [How to use ToneCrafter](#how-to-use-tonecrafter)
+  * [Installing Anaconda and TensorFlow](#installing-anaconda-and-tensorflow--)
+  * [Dataset](#dataset--)
+  * [Useful links](#useful-links--)
+- [Resources](#ressources)
+- [What's next ?](#what-s-next-?)
 
 
 ## Our work so far
@@ -37,7 +37,29 @@ Then, if you want to have fun on the models created by the Google team with the 
 
 
 ### Dataset
+To train our CNN, we searched for a dataset containing clean audio from a guitar and different distortions. As we could not find any we had to create our own. We recorded a guitar for 1 minute and added various levels of distortion. To increase the size of our base, we applied an EQ filter with various settings.  
+We ended up with a lot of .wav files that you can find [here](https://github.com/ToneCrafter-Team/ToneCrafter/tree/main/Software/CNN%20Models/Dataset).  
+In order to train our CNN, we splitted our files in 200ms chunks using our [Preparing Data Notebook](https://github.com/ToneCrafter-Team/ToneCrafter/blob/main/Software/CNN%20Models/Preparing_Data.ipynb)  
+We then organised our files in the following way :  
 
+- X_train :  
+  * Clean  
+  * Clean_TrebbleBoost  
+  * Clean_BassBoost  
+  * Clean_BassCut  
+
+- y_train :
+  * Disto  
+  * Disto_TrebbleBoost  
+  * Disto_BassBoost  
+  * Disto_BassCut  
+
+- Validation data :
+  * Clean_TrebbleCut as X_valid  
+  * Disto_TrebbleCut as y_valid  
+We are concious that this dataset is far from perfect (please don't listen to it, the guitar playing is awful) from a recording standpoint and the way we splitted our audio might cause some problems.
+
+For the maths oriented approach, we used the excellent [IDMT-SMT-Audio_Effects Dataset](https://www.idmt.fraunhofer.de/en/business_units/m2d/smt/audio_effects.html), which enabled us to link each note played to it's distorted counterpart.  
 ### Useful links
 
 ## What's next ?
