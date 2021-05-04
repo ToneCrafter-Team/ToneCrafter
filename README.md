@@ -28,10 +28,13 @@ We started working on different PCB designs using [Eagle](https://www.autodesk.c
 ### Installing Anaconda and TensorFlow
 To begin with, if you want to work locally and not on Colabs as we did, you will have to install Anaconda.
 To do this, go to: https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/  
-And follow the instructions that are given to you.
+And follow the instructions that are given to you.  
+
+If you want to try the huge potential of DDSP, let’s check the [GitHub](https://github.com/magenta/ddsp) from Magenta which show how to install it.
+There are also some tutorials to introduce the main concepts of the library (that we strongly recommend you to do) and demos to show what you can do with it (Like Timbre transfer, Train Autoencoder and Pitch Detection).
 
 
-Then, if you want to have fun on the models created by the Google team with the Magenta project, follow the installation guide on their GitHub: https://github.com/magenta/magenta
+And then, if you want to have fun on the models created by the Google team with the Magenta project, follow the installation guide on their GitHub: https://github.com/magenta/magenta
 
 
 ### Dataset
