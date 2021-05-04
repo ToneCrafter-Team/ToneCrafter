@@ -5,13 +5,13 @@ Our goal is to develop an algorithm capable of analyzing any audio file containi
 We are also working on a hardware implementation using a STM32 µC that will allow musicians to use ToneCrafter on stage and tune the different parameters.
 
 - [Our work so far](#our-work-so-far)
-  * [Software](#software-)
-  * [Hardware](#hardware-)
+  * [Software](#software)
+  * [Hardware](#hardware)
 - [How to use ToneCrafter](#how-to-use-tonecrafter)
   * [Installing Anaconda and TensorFlow](#installing-anaconda-and-tensorflow)
   * [Dataset](#dataset)
   * [Useful links](#useful-links)
-- [What's next ?](#what-s-next-)
+- [What's next ?](#whats-next-)
 
 ## Our work so far
 ### Software
