@@ -11,7 +11,7 @@ We are also working on a hardware implementation using a STM32 µC that will all
   * [Installing Anaconda and TensorFlow](#installing-anaconda-and-tensorflow)
   * [Dataset](#dataset)
   * [Useful links](#useful-links)
-- [What's next ?](#what-s-next)
+- [What's next ?](#what-s-next--)
 
 ## Our work so far
 ### Software :
