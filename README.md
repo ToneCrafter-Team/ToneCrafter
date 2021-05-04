@@ -57,6 +57,7 @@ We then organised our files in the following way :
 - Validation data :
   * Clean_TrebbleCut as X_valid  
   * Disto_TrebbleCut as y_valid  
+
 We are concious that this dataset is far from perfect (please don't listen to it, the guitar playing is awful) from a recording standpoint and the way we splitted our audio might cause some problems.
 
 For the maths oriented approach, we used the excellent [IDMT-SMT-Audio_Effects Dataset](https://www.idmt.fraunhofer.de/en/business_units/m2d/smt/audio_effects.html), which enabled us to link each note played to it's distorted counterpart.  
