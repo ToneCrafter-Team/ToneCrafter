@@ -33,7 +33,7 @@ To do this, go to: https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflo
 And follow the instructions that are given to you.
 
 
-Then, if you want to have fun on the models created by the Google team with the Magenta project, follow the installation instructions on their GitHub: https://github.com/magenta/magenta
+Then, if you want to have fun on the models created by the Google team with the Magenta project, follow the installation guide on their GitHub: https://github.com/magenta/magenta
 
 
 ### Dataset
