@@ -5,23 +5,23 @@ Our goal is to develop an algorithm capable of analyzing any audio file containi
 We are also working on a hardware implementation using a STM32 µC that will allow musicians to use ToneCrafter on stage and tune the different parameters.
 
 - [Our work so far](#our-work-so-far)
-  * [Software](#software)
-  * [Hardware](#hardware)
+  * [Software](#software-)
+  * [Hardware](#hardware-)
 - [How to use ToneCrafter](#how-to-use-tonecrafter)
   * [Installing Anaconda and TensorFlow](#installing-anaconda-and-tensorflow)
   * [Dataset](#dataset)
   * [Useful links](#useful-links)
-- [What's next ?](#what-s-next--)
+- [What's next ?](#what-s-next-)
 
 ## Our work so far
-### Software :
+### Software
 We started out trying to use Magenta's [DDSP](https://www.github.com/magenta/ddsp), but this was a bit too ambitious for AI newbies like us, so we tried implementing our own algorithms.  
 This sparked three different approaches to our problem:  
   * A CNN based approach where we tried to teach a neural network to recreate a distortion.
   * A "bare coding" approach using math and clever algorithms to recreate a distortion from an audio file
   * A VAE based approach trying to recreate the mechanisms behind Magenta's DDSP
 
-### Hardware :
+### Hardware
 We started working on different PCB designs using [Eagle](https://www.autodesk.com/products/eagle/overview) and working on a STM32F7 discovery kit for testing purposes.
 
 ## How to use ToneCrafter
