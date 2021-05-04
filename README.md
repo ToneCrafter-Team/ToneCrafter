@@ -3,10 +3,26 @@
 ToneCrafter is a project developped by students at [ENSEA](https://www.ensea.fr/).  
 Our goal is to develop an algorithm capable of analyzing any audio file containing guitar sounds and retrieve its parameters. ToneCrafter will then generate a numeric filter that will modulate your guitar sound and make it sound like the recording you fed it. Exciting isn't it ?  
 We are also working on a hardware implementation using a STM32 µC that will allow musicians to use ToneCrafter on stage and tune the different parameters.
-## Our work so far 
+
+- [Our work so far](#our-work-so-far)
+  * [Software :](#software--)
+  * [Hardware :](#hardware--)
+-[How to use  ToneCrafter](#)
+  * [Installing Anaconda and TensorFlow](#)
+  * [Dataset](#)
+  * [Useful links](#)
+-[Resources](#ressources--)
+- [What's next ?](#what-s-next--)
+
+
+## Our work so far
 ### Software :
-We are currently using magenta's [DDSP](https://www.github.com/magenta/ddsp) library on a conda installation with Python 3.8, and are currently able to create simple filters such as a reverb, delay, flanger, chorus, vibrato, and soon a distortion !  
-<b><u>Update :</u></b> As of March of 2021, we no longer use DDSP as it's API is a bit too complex to use for us. Instead, we are defining our own CNN with a revised goal : being able to properly replicate a distortion. Our plan is to build off that base model to adapt it to more and more effects.
+We started out trying to use Magenta's [DDSP](https://www.github.com/magenta/ddsp), but this was a bit too ambitious for AI newbies like us, so we tried implementing our own algorithms.  
+This sparked three different approaches to our problem:  
+  * A CNN based approach where we tried to teach a neural network to recreate a distortion.
+  * A "bare coding" approach using math and clever algorithms to recreate a distortion from an audio file
+  * A VAE based approach trying to recreate the mechanisms behind Magenta's DDSP
+
 ### Hardware :
 We started working on different PCB designs using [Eagle](https://www.autodesk.com/products/eagle/overview) and working on a STM32F7 discovery kit for testing purposes.
 ## What's next ?
