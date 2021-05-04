@@ -29,11 +29,19 @@ We started working on different PCB designs using [Eagle](https://www.autodesk.c
 ## How to use ToneCrafter
 ### Installing Anaconda and TensorFlow
 To begin with, if you want to work locally and not on Colabs as we did, you will have to install Anaconda.
+<<<<<<< HEAD
 To do this, go to :\n
 https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/
 And follow the instructions that are given to you.
 
 Then, if you want to have fun on the models created by the Google team with the Magenta project, follow the installation instructions on their GitHub:\n
+=======
+To do this, go to
+https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/
+And follow the instructions that are given to you.
+
+Then, if you want to have fun on the models created by the Google team with the Magenta project, follow the installation instructions on their GitHub:
+>>>>>>> f3a37cf1434197d676b23854a74166b6c7733253
 https://github.com/magenta/magenta
 
 ### Dataset
