@@ -61,7 +61,7 @@ We then organised our files in the following way :
 We are concious that this dataset is far from perfect (please don't listen to it, the guitar playing is awful) from a recording standpoint and the way we splitted our audio might cause some problems.
 
 For the maths oriented approach, we used the excellent [IDMT-SMT-Audio_Effects Dataset](https://www.idmt.fraunhofer.de/en/business_units/m2d/smt/audio_effects.html), which enabled us to link each note played to it's distorted counterpart.  
-### Useful links
 
+<span style="color:red"> *For a more in-depths version of this readme, checkout our (magnificent) project report available in both French and English at the root of this repository*</span>
 ## What's next ?
 As of the 03/05/2021, our yearly project has ended. We will continue to work on ToneCrafter at a lighter pace, as we'll be completing our summer internships. If all goes well, some new students will pick up the project in the fall to continue to build on top of our work. In the mean time, don't hesitate to take part in our project, via issues or pull requests.  
