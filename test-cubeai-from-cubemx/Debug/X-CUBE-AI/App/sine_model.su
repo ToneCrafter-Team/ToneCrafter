@@ -1,0 +1,10 @@
+sine_model.c:306:9:sine_model_configure_activations	24	static
+sine_model.c:337:9:sine_model_configure_weights	24	static
+sine_model.c:375:9:ai_sine_model_get_info	136	static
+sine_model.c:420:9:ai_sine_model_get_report	136	static
+sine_model.c:466:10:ai_sine_model_get_error	16	static
+sine_model.c:472:10:ai_sine_model_create	24	static
+sine_model.c:482:11:ai_sine_model_destroy	16	static
+sine_model.c:488:9:ai_sine_model_init	24	static
+sine_model.c:505:8:ai_sine_model_run	24	static
+sine_model.c:512:8:ai_sine_model_forward	16	static

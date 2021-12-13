@@ -1,0 +1,121 @@
+Neural Network Tools for STM32AI v1.5.1 (STM.ai v7.0.0-RC8)
+Created date          : 2021-12-13 11:51:32
+Parameters            : generate --name sine_model -m /home/pierre/Téléchargements/sine_model.tflite --type tflite --compression 8 --verbosity 1 --workspace /tmp/mxAI_workspace825954587489311893098586150257365 --output /home/pierre/.stm32cubemx
+
+Exec/report summary (generate)
+------------------------------------------------------------------------------------------------------------------------
+model file            : /home/pierre/Téléchargements/sine_model.tflite
+type                  : tflite
+c_name                : sine_model
+compression           : 8
+workspace dir         : /tmp/mxAI_workspace825954587489311893098586150257365
+output dir            : /home/pierre/.stm32cubemx
+
+model_name            : sine_model
+model_hash            : 0eb158416c801343327f17799db97a2d
+input                 : dense_10_input [1 items, 4 B, ai_float, float, (1, 1, 1, 1)]
+inputs (total)        : 4 B
+output                : dense_2 [1 items, 4 B, ai_float, float, (1, 1, 1, 1)]
+outputs (total)       : 4 B
+params #              : 321 items (1.25 KiB)
+macc                  : 353
+weights (ro)          : 452 B (452 B) / -832(-64.8%) vs original model
+activations (rw)      : 128 B (128 B) 
+ram (total)           : 136 B (136 B) = 128 + 4 + 4
+
+Model name - sine_model ['dense_10_input'] ['dense_2']
+---------------------------------------------------------------------------------------------------------------------
+id   layer (type)             oshape   param/size   macc   connected to     |   c_size         c_macc   c_type      
+---------------------------------------------------------------------------------------------------------------------
+0    dense_10_input (Input)   (c:1)                                         |                          
+     dense_0 (Dense)          (c:16)   32/128       32     dense_10_input   |                           dense()[0]  
+     nl_0_nl (Nonlinearity)   (c:16)                16     dense_0          |                           nl()[1]     
+---------------------------------------------------------------------------------------------------------------------
+1    dense_1 (Dense)          (c:16)   272/1,088    272    nl_0_nl          |   -832(-76.5%)            dense(c4)[2]
+     nl_1_nl (Nonlinearity)   (c:16)                16     dense_1          |                           nl()[3]     
+---------------------------------------------------------------------------------------------------------------------
+2    dense_2 (Dense)          (c:1)    17/68        17     nl_1_nl          |                           dense()/o[4]
+---------------------------------------------------------------------------------------------------------------------
+model/c-model: macc=353/353  weights=1,284/452 -832(-64.8%) activations=--/128 io=--/8
+
+
+
+Generated C-graph summary
+------------------------------------------------------------------------------------------------------------------------
+model name            : sine_model
+c-name                : sine_model
+c-node #              : 5
+c-array #             : 12
+activations size      : 128
+weights size          : 452
+macc                  : 353
+inputs                : ['dense_10_input_output']
+outputs               : ['dense_2_output']
+
+
+
+C-Arrays (12)
+------------------------------------------------------------------------------------------------------------------------
+c_id  name (*_array)         item/size           mem-pool     c-type       fmt        comment            
+------------------------------------------------------------------------------------------------------------------------
+0     dense_10_input_output  1/4                 user         float        float      /input             
+1     dense_0_output         16/64               activations  float        float                         
+2     nl_0_nl_output         16/64               activations  float        float                         
+3     dense_1_output         16/64               activations  float        float                         
+4     nl_1_nl_output         16/64               activations  float        float                         
+5     dense_2_output         1/4                 user         float        float      /output            
+6     dense_0_weights        16/64               weights      const float  float                         
+7     dense_0_bias           16/64               weights      const float  float                         
+8     dense_1_weights        256/192             weights      const float  c4 (LUT4)                     
+9     dense_1_bias           16/64               weights      const float  float                         
+10    dense_2_weights        16/64               weights      const float  float                         
+11    dense_2_bias           1/4                 weights      const float  float                         
+------------------------------------------------------------------------------------------------------------------------
+
+
+
+C-Layers (5)
+------------------------------------------------------------------------------------------------------------------------
+c_id  name (*_layer)  id  layer_ macc        rom         tensors                   shape (array id)                       
+------------------------------------------------------------------------------------------------------------------------
+0     dense_0         0   dense  32          128         I: dense_10_input_output  (1, 1, 1, 1) (0)                       
+                                                         W: dense_0_weights                                               
+                                                         W: dense_0_bias                                                  
+                                                         O: dense_0_output         (1, 1, 1, 16) (1)                      
+------------------------------------------------------------------------------------------------------------------------
+1     nl_0_nl         0   nl     16          0           I: dense_0_output         (1, 1, 1, 16) (1)                      
+                                                         O: nl_0_nl_output         (1, 1, 1, 16) (2)                      
+------------------------------------------------------------------------------------------------------------------------
+2     dense_1         1   dense  272         256         I: nl_0_nl_output         (1, 1, 1, 16) (2)                      
+                                                         W: dense_1_weights                                               
+                                                         W: dense_1_bias                                                  
+                                                         O: dense_1_output         (1, 1, 1, 16) (3)                      
+------------------------------------------------------------------------------------------------------------------------
+3     nl_1_nl         1   nl     16          0           I: dense_1_output         (1, 1, 1, 16) (3)                      
+                                                         O: nl_1_nl_output         (1, 1, 1, 16) (4)                      
+------------------------------------------------------------------------------------------------------------------------
+4     dense_2         2   dense  17          68          I: nl_1_nl_output         (1, 1, 1, 16) (4)                      
+                                                         W: dense_2_weights                                               
+                                                         W: dense_2_bias                                                  
+                                                         O: dense_2_output         (1, 1, 1, 1) (5)                       
+------------------------------------------------------------------------------------------------------------------------
+
+
+
+Complexity report per layer - macc=353 weights=452 act=128 ram_io=8
+------------------------------------------------------------------------
+id   name      c_macc                    c_rom                     c_id
+------------------------------------------------------------------------
+0    dense_0   ||                 9.1%   ||||||||          28.3%   [0] 
+0    nl_0_nl   |                  4.5%   |                  0.0%   [1] 
+1    dense_1   ||||||||||||||||  77.1%   ||||||||||||||||  56.6%   [2] 
+1    nl_1_nl   |                  4.5%   |                  0.0%   [3] 
+2    dense_2   |                  4.8%   ||||              15.0%   [4] 
+
+Generated files (5)
+-------------------------------------------------------
+/home/pierre/.stm32cubemx/sine_model_config.h
+/home/pierre/.stm32cubemx/sine_model.h
+/home/pierre/.stm32cubemx/sine_model.c
+/home/pierre/.stm32cubemx/sine_model_data.h
+/home/pierre/.stm32cubemx/sine_model_data.c

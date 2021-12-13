@@ -1,0 +1,2 @@
+sine_model_data.c:54:11:ai_sine_model_data_weights_get	4	static
+sine_model_data.c:73:9:ai_sine_model_data_params_get	32	static
